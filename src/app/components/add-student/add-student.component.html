@@ -1,0 +1,27 @@
+<div class="container">
+  <app-header title="Hozzáadás" buttonTitle="Vissza" buttonLink="/students" buttonClass="btn-secondary">
+  </app-header>
+
+  <div class="form-group">
+    <label for="inputName">Név</label>
+    <input type="text" class="form-control" id="inputName" placeholder="Név" [(ngModel)]="student.name" [ngClass]="{ 'is-invalid': !nameValid }">
+  </div>
+  <div class="form-group">
+    <label for="inputEmail">E-mail cím</label>
+    <input type="email" class="form-control" id="inputEmail" placeholder="E-mail cím" [(ngModel)]="student.email" [ngClass]="{ 'is-invalid': !emailValid }">
+  </div>
+  <div class="form-group">
+    <label for="inputAge">Életkor</label>
+    <input type="number" class="form-control" id="inputAge" placeholder="Életkor" [(ngModel)]="student.age" [ngClass]="{ 'is-invalid': !ageValid }">
+  </div>
+  <div class="form-group">
+      <label class="mr-2" for="inputGender">Nem</label>
+      <select class="custom-select my-1 mr-sm-2" id="inputGender" [(ngModel)]="student.gender">
+        <option value="female">Nő</option>
+        <option value="male">Férfi</option>
+        <option value="2">Egyéb</option>
+        <option value="3">Nem szeretném megadni</option>
+      </select>
+  </div>
+  <button class="btn btn-primary save-button" (click)="saveStudent()">Mentés</button>
+</div>

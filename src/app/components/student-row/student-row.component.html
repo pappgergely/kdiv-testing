@@ -1,0 +1,8 @@
+<td>{{ student.name }}</td>
+<td>{{ student.email }}</td>
+<td>{{ student.age }}</td>
+<td>{{ student.gender | gender }}</td>
+<td>
+  <button type="button" class="btn btn-warning btn-sm edit-button" (click)="modify()">Módosít</button>
+  <button type="button" class="btn btn-danger btn-sm delete-button" (click)="delete()">Töröl</button>
+</td>
